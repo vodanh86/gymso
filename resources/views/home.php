@@ -110,8 +110,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
             <div class="ExploreClubs_text__XX4Mx">
                 <h2 class="ExploreClubs_title__T4_4d">One Membership.
                     Limitless Potential.</h2>
-                <div class="ExploreClubs_description__6nXd4">Unlimited Signature Classes, precision-backed Personal
-                    Training, and exclusive amenities to recover and regenerate.</div><a class="ExploreClubs_cta__8ymBa"
+                <div class="ExploreClubs_description__6nXd4">Unlimited Signature Classes, precision-backed Personal Training, and exclusive amenities to recover and regenerate.</div><a class="ExploreClubs_cta__8ymBa"
                     href="/memberbenefits">Explore Membership</a>
             </div>
         </div>
