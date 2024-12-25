@@ -122,8 +122,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
         <div class="ExploreClubs_content__EKXDA">
             <div class="ExploreClubs_text__XX4Mx">
                 <h2 class="ExploreClubs_title__T4_4d">Where Luxury and Fitness Meet</h2>
-                <div class="ExploreClubs_description__6nXd4">Award-winning spaces and regenerative amenities designed to
-                    drive your performance forward.</div><a class="ExploreClubs_cta__8ymBa"
+                <div class="ExploreClubs_description__6nXd4">Award-winning spaces and regenerative amenities designed to drive your performance forward.</div><a class="ExploreClubs_cta__8ymBa"
                     href="/clubs?icmp=home-clubs">Find A Club</a>
             </div>
         </div>
@@ -165,8 +164,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
                 <div class="HighlightsWithPhotoBackground_highlight-info__mK8Rx "
                     onmouseenter="handleHighlightChange('classes', 2)">
                     <h3 class="HighlightsWithPhotoBackground_highlight-title__dMkZ_">Personal Training</h3>
-                    <p class="HighlightsWithPhotoBackground_highlight-text__nh40m">Precision-backed 1:1 Personal
-                        Training with EFTI-certified COACHES, dedicated to maximizing your potential.</p><a
+                    <p class="HighlightsWithPhotoBackground_highlight-text__nh40m">Precision-backed 1:1 Personal Training with EFTI-certified COACHES, dedicated to maximizing your potential.</p><a
                         class="HighlightsWithPhotoBackground_highlight-link__UthCW"
                         href="/personaltraining?icmp=home-personaltraining" title="Discover Personal Training">Discover
                         Personal Training</a>
@@ -180,8 +178,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
                 <div class="HighlightsWithPhotoBackground_highlight-info__mK8Rx "
                     onmouseenter="handleHighlightChange('classes', 3)">
                     <h3 class="HighlightsWithPhotoBackground_highlight-title__dMkZ_">Authentic Pilates</h3>
-                    <p class="HighlightsWithPhotoBackground_highlight-text__nh40m">Studio Pilates sessions with 1:1
-                        instruction. Tone your core and activate your mind-body connection.</p><a
+                    <p class="HighlightsWithPhotoBackground_highlight-text__nh40m">Studio Pilates sessions with 1:1 instruction. Tone your core and activate your mind-body connection.</p><a
                         class="HighlightsWithPhotoBackground_highlight-link__UthCW" href="/pilates?icmp=home-pilates"
                         title="Discover Pilates">Discover Pilates</a>
                 </div>
