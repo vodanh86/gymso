@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php use App\Models\Post; ?>
 <head>
 
     <title>Gymso Fitness HTML Template</title>
@@ -73,26 +73,26 @@ https://www.tooplate.com/view/2119-gymso-fitness
 
 
     <!-- HERO -->
-    <section class="hero d-flex flex-column justify-content-center align-items-center" id="home">
+    <?php $post1 = Post::where('code', 'ALPHA1')->first(); ?>
+    <section class="hero d-flex flex-column justify-content-center align-items-center" 
+    style="background-image: url('<?="storage/".$post1->image?>');" id="home">
 
         <div class="bg-overlay"></div>
 
         <div class="container">
             <div class="row">
-
                 <div class="col-lg-8 col-md-10  col-12">
                     <div class="hero-text mt-5 text-start">
 
                         <h1 class="text-white" data-aos="fade-up" data-aos-delay="500"
                             class="PageHero_subheading__IxFFF">
-                            EQUINOX HOLIDAY <del>SALE</del></h1>
+                            <?=$post1->title?></h1>
 
-                        <h6 data-aos="fade-up" data-aos-delay="300" class="PageHero_subheading__IxFFF">Join today and
-                            get $0 initiation. Offer extended. Offer ends soon.</h6>
+                        <h6 data-aos="fade-up" data-aos-delay="300" class="PageHero_subheading__IxFFF"><?=$post1->content?></h6>
 
 
                         <a href="#feature" class="PageHero_cta__vJsVl btn custom-btn mt-3" data-aos="fade-up"
-                            data-aos-delay="600">Join now</a>
+                            data-aos-delay="600"><?=$post1->button?></a>
 
                     </div>
                 </div>
@@ -102,27 +102,29 @@ https://www.tooplate.com/view/2119-gymso-fitness
     </section>
 
     <!-- Member -->
-    <section class="member d-flex flex-column justify-content-center align-items-center" id="home">
+    <?php $post2 = Post::where('code', 'ALPHA2')->first(); ?>
+    <section class="member d-flex flex-column justify-content-center align-items-center" 
+    style="background-image: url('<?="storage/".$post2->image?>');"id="home">
 
         <div class="bg-overlay"></div>
 
         <div class="ExploreClubs_content" style="">
             <div class="ExploreClubs_text__XX4Mx">
-                <h2 class="ExploreClubs_title__T4_4d">One Membership.
-                    Limitless Potential.</h2>
-                <div class="ExploreClubs_description__6nXd4">Unlimited Signature Classes, precision-backed Personal Training, and exclusive amenities to recover and regenerate.</div><a class="ExploreClubs_cta__8ymBa"
-                    href="/memberbenefits">Explore Membership</a>
+                <h2 class="ExploreClubs_title__T4_4d"><?=$post2->title?></h2>
+                <div class="ExploreClubs_description__6nXd4"><?=$post2->content?></div><a class="ExploreClubs_cta__8ymBa"
+                    href="/memberbenefits"><?=$post2->button?></a>
             </div>
         </div>
     </section>
 
     <!-- Find -->
+    <?php $post3 = Post::where('code', 'ALPHA3')->first(); ?>
     <section class="ExploreClubs_explore-clubs__y_0RN" data-eqx-plus-app="false" data-is="ExploreClubs">
         <div class="ExploreClubs_content__EKXDA">
             <div class="ExploreClubs_text__XX4Mx">
-                <h2 class="ExploreClubs_title__T4_4d">Where Luxury and Fitness Meet</h2>
-                <div class="ExploreClubs_description__6nXd4">Award-winning spaces and regenerative amenities designed to drive your performance forward.</div><a class="ExploreClubs_cta__8ymBa"
-                    href="/clubs?icmp=home-clubs">Find A Club</a>
+                <h2 class="ExploreClubs_title__T4_4d"><?=$post3->title?></h2>
+                <div class="ExploreClubs_description__6nXd4"><?=$post3->content?></div><a class="ExploreClubs_cta__8ymBa"
+                    href="/clubs?icmp=home-clubs"><?=$post3->button?></a>
             </div>
         </div>
         <figure class="ResponsiveVideo_responsive-video__F89V0 ExploreClubs_media__zlOjg">
@@ -141,22 +143,21 @@ https://www.tooplate.com/view/2119-gymso-fitness
                 </svg></button>
         </figure>
     </section>
-
+    <?php $post4 = Post::where('code', 'ALPHA4')->first(); ?>
     <section class="HighlightsWithPhotoBackground_container__CiCM1 HighlightSection classes"
         data-is="HighlightsWithPhotoBackground">
         <ul class="HighlightsWithPhotoBackground_highlights__JbwP5" data-current-index="2">
             <li aria-current="false" class="pointer HighlightsWithPhotoBackground_highlight__l3wIT">
                 <div class="HighlightsWithPhotoBackground_highlight-info__mK8Rx "
                     onmouseenter="handleHighlightChange('classes', 1)">
-                    <h3 class="HighlightsWithPhotoBackground_highlight-title__dMkZ_">Signature Classes</h3>
-                    <p class="HighlightsWithPhotoBackground_highlight-text__nh40m">New and Unlimited Classes exclusive
-                        to Equinox. Designed for the individual. Powered by the collective.</p><a
+                    <h3 class="HighlightsWithPhotoBackground_highlight-title__dMkZ_"><?=$post4->title?></h3>
+                    <p class="HighlightsWithPhotoBackground_highlight-text__nh40m"><?=$post4->content?>.</p><a
                         class="HighlightsWithPhotoBackground_highlight-link__UthCW"
-                        href="/groupfitness?icmp=home-classes" title="Discover Classes">Discover Classes</a>
+                        href="/groupfitness?icmp=home-classes" title="Discover Classes"><?=$post4->button?></a>
                 </div>
                 <img class="ResponsiveImage_responsive-image___2kO5 HighlightsWithPhotoBackground_photo__KRDev HighlightsWithPhotoBackground_photo__KRDev_1"
                     style="width: 100%; height: 100%; object-fit: cover;"
-                    src="https://images.ctfassets.net/drib7o8rcbyf/6MCwh6hcdFoxmWYRc8n3cj/6eb98f4e777ac69df28cec18d72eb873/CORE_ANCILLARIES_MODULE__GF_1440x720-min.jpg"
+                    src="<?="storage".$post4->image?>"
                     alt="CORE ANCILLARIES MODULE GF 375x563-min" loading="lazy" title="It’s Not Fitness. It’s Life.">
             </li>
             <li aria-current="false" class="pointer HighlightsWithPhotoBackground_highlight__l3wIT">
