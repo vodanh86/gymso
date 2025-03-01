@@ -191,31 +191,30 @@ https://www.tooplate.com/view/2119-gymso-fitness
             </li>
         </ul>
     </section>
-
+    <?php $post7 = Post::where('code', 'ALPHA7')->first(); ?>
     <section class="HighlightsWithPhotoBackground_container__CiCM1 HighlightSection spa" data-is="HighlightsWithPhotoBackground">
         <ul class="HighlightsWithPhotoBackground_highlights__JbwP5" data-current-index="2">
             <li aria-current="false" class="HighlightsWithPhotoBackground_highlight__l3wIT">
                 <div class="HighlightsWithPhotoBackground_highlight-info__mK8Rx "
                     onmouseenter="handleHighlightChange('spa', 1)">
-                    <h3 class="HighlightsWithPhotoBackground_highlight-title__dMkZ_">The Spa at Equinox</h3>
-                    <p class="HighlightsWithPhotoBackground_highlight-text__nh40m">Relax. Recover. Want It All at The
-                        Spa, where innovative treatments rejuvenate the body at a cellular level.</p><a
+                    <h3 class="HighlightsWithPhotoBackground_highlight-title__dMkZ_"><?=$post7->title?></h3>
+                    <p class="HighlightsWithPhotoBackground_highlight-text__nh40m"><?=$post7->content?></p><a
                         class="HighlightsWithPhotoBackground_highlight-link__UthCW" href="/spa"
-                        title="Discover The Spa">Discover The Spa</a>
+                        title="Discover The Spa"><?=$post7->button?></a>
                 </div>
                 <img class="ResponsiveImage_responsive-image___2kO5 HighlightsWithPhotoBackground_photo__KRDev HighlightsWithPhotoBackground_photo__KRDev_1"
                     src="https://images.ctfassets.net/drib7o8rcbyf/54OlmuJH5dWClrOXbuVkRV/42f8b590394cea1f03ef67879e674914/REGENERATION_MODULE__SPA_1440x720-min.jpg"
                     alt="REGENERATION MODULE SPA 375x563-min" loading="lazy" style="object-position:50% 50%"
                     title="It’s Not Fitness. It’s Life.">
             </li>
+            <?php $post8 = Post::where('code', 'ALPHA8')->first(); ?>
             <li aria-current="false" class="HighlightsWithPhotoBackground_highlight__l3wIT">
                 <div class="HighlightsWithPhotoBackground_highlight-info__mK8Rx "
                     onmouseenter="handleHighlightChange('spa', 2)">
-                    <h3 class="HighlightsWithPhotoBackground_highlight-title__dMkZ_">Exclusive Amenities</h3>
-                    <p class="HighlightsWithPhotoBackground_highlight-text__nh40m">Access immaculate locker rooms,
-                        saunas, and steam rooms equipped with eucalyptus towels and Grown Alchemist products.</p><a
+                    <h3 class="HighlightsWithPhotoBackground_highlight-title__dMkZ_"><?=$post8->title?></h3>
+                    <p class="HighlightsWithPhotoBackground_highlight-text__nh40m"><?=$post8->content?></p><a
                         class="HighlightsWithPhotoBackground_highlight-link__UthCW"
-                        href="https://www.equinox.com/clubs?icmp=topnav-clubs" title="Discover More">Discover More</a>
+                        href="https://www.equinox.com/clubs?icmp=topnav-clubs" title="Discover More"><?=$post8->button?></a>
                 </div>
                 <img class="ResponsiveImage_responsive-image___2kO5 HighlightsWithPhotoBackground_photo__KRDev HighlightsWithPhotoBackground_photo__KRDev_2"
                     src="https://images.ctfassets.net/drib7o8rcbyf/4a67botDiY5vzArRZJFfPi/0d36e94f328601ffc0a4e10dec3cd584/REGENERATION_MODULE__Amenities_1440x720-min.jpg"
@@ -223,14 +222,14 @@ https://www.tooplate.com/view/2119-gymso-fitness
                     title="It’s Not Fitness. It’s Life.">
 
             </li>
+            <?php $post9 = Post::where('code', 'ALPHA9')->first(); ?>
             <li aria-current="true" class="HighlightsWithPhotoBackground_highlight__l3wIT">
                 <div class="HighlightsWithPhotoBackground_highlight-info__mK8Rx "
                     onmouseenter="handleHighlightChange('spa', 3)">
-                    <h3 class="HighlightsWithPhotoBackground_highlight-title__dMkZ_">Iconic Spaces</h3>
-                    <p class="HighlightsWithPhotoBackground_highlight-text__nh40m">Each Club is designed with
-                        Award-Winning Precision to reflect our High-Performance Community.</p><a
+                    <h3 class="HighlightsWithPhotoBackground_highlight-title__dMkZ_"><?=$post9->title?></h3>
+                    <p class="HighlightsWithPhotoBackground_highlight-text__nh40m"><?=$post9->content?></p><a
                         class="HighlightsWithPhotoBackground_highlight-link__UthCW"
-                        href="https://www.equinox.com/clubs?icmp=topnav-clubs" title="Discover More">Discover More</a>
+                        href="https://www.equinox.com/clubs?icmp=topnav-clubs" title="Discover More"><?=$post9->button?></a>
                 </div>
                 <img class="ResponsiveImage_responsive-image___2kO5 HighlightsWithPhotoBackground_photo__KRDev HighlightsWithPhotoBackground_photo__KRDev_3"
                     src="https://images.ctfassets.net/drib7o8rcbyf/421G6B9N6ShV9NsX8Byxzp/0851d1a3b0360e718e262960ddc8ad43/REGENERATION_MODULE__ICONIC_SPACES_1440x720-min.jpg"
@@ -241,15 +240,16 @@ https://www.tooplate.com/view/2119-gymso-fitness
     </section>
 
     <!-- Member -->
+    <?php $post10 = Post::where('code', 'ALPHA10')->first(); ?>
     <section class="app d-flex flex-column justify-content-center align-items-center" id="home">
 
         <div class="bg-overlay"></div>
 
         <div class="ExploreClubs_content" style="">
             <div class="ExploreClubs_text__XX4Mx">
-                <h2 class="ExploreClubs_title__T4_4d">Equinox+</h2>
-                <div class="ExploreClubs_description__6nXd4">Get exclusive access to 1,000+ hours of live and on-demand classes. Wherever you are. Whenever you’re ready.</div><a class="ExploreClubs_cta__8ymBa"
-                    href="/memberbenefits">Explore the App</a>
+                <h2 class="ExploreClubs_title__T4_4d"><?=$post10->title?>+</h2>
+                <div class="ExploreClubs_description__6nXd4"><?=$post10->content?></div><a class="ExploreClubs_cta__8ymBa"
+                    href="/memberbenefits"><?=$post10->button?></a>
             </div>
         </div>
     </section>
