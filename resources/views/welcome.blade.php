@@ -157,7 +157,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
                 </div>
                 <img class="ResponsiveImage_responsive-image___2kO5 HighlightsWithPhotoBackground_photo__KRDev HighlightsWithPhotoBackground_photo__KRDev_1"
                     style="width: 100%; height: 100%; object-fit: cover;"
-                    src="<?="storage".$post4->image?>"
+                    src="<?="storage/".$post4->image?>"
                     alt="CORE ANCILLARIES MODULE GF 375x563-min" loading="lazy" title="It’s Not Fitness. It’s Life.">
             </li>
             <?php $post5 = Post::where('code', 'ALPHA5')->first(); ?>
@@ -171,7 +171,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
                 </div>
                 <img class="ResponsiveImage_responsive-image___2kO5 HighlightsWithPhotoBackground_photo__KRDev HighlightsWithPhotoBackground_photo__KRDev_2"
                     style="width: 100%; height: 100%; object-fit: cover;"
-                    src="https://images.ctfassets.net/drib7o8rcbyf/65YoGitAhcKE9LuX7GED4/b5397a2c872f7eb2942f8d6dd765239a/CORE_ANCILLARIES_MODULE__PT_1440x720-min.jpg"
+                    src="<?="storage/".$post5->image?>"
                     alt="CORE ANCILLARIES MODULE PT 375x563-min" loading="lazy" title="It’s Not Fitness. It’s Life.">
             </li>
             <?php $post6 = Post::where('code', 'ALPHA6')->first(); ?>
@@ -185,7 +185,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
                 </div>
                 <img class="ResponsiveImage_responsive-image___2kO5 HighlightsWithPhotoBackground_photo__KRDev HighlightsWithPhotoBackground_photo__KRDev_3"
                     style="width: 100%; height: 100%; object-fit: cover;"
-                    src="https://images.ctfassets.net/drib7o8rcbyf/4Snxzho40SytIQ6cgXt0is/853f620970a791081cc0281a1750e744/CORE_ANCILLARIES_MODULE__STUDIO_PILATES_1440x720-min.jpg"
+                    src="<?="storage/".$post5->image?>"
                     alt="CORE ANCILLARIES MODULE STUDIO PILATES 375x563-min" loading="lazy"
                     title="It’s Not Fitness. It’s Life.">
             </li>
@@ -203,7 +203,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
                         title="Discover The Spa"><?=$post7->button?></a>
                 </div>
                 <img class="ResponsiveImage_responsive-image___2kO5 HighlightsWithPhotoBackground_photo__KRDev HighlightsWithPhotoBackground_photo__KRDev_1"
-                    src="https://images.ctfassets.net/drib7o8rcbyf/54OlmuJH5dWClrOXbuVkRV/42f8b590394cea1f03ef67879e674914/REGENERATION_MODULE__SPA_1440x720-min.jpg"
+                    src="<?="storage/".$post7->image?>"
                     alt="REGENERATION MODULE SPA 375x563-min" loading="lazy" style="object-position:50% 50%"
                     title="It’s Not Fitness. It’s Life.">
             </li>
@@ -217,7 +217,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
                         href="https://www.equinox.com/clubs?icmp=topnav-clubs" title="Discover More"><?=$post8->button?></a>
                 </div>
                 <img class="ResponsiveImage_responsive-image___2kO5 HighlightsWithPhotoBackground_photo__KRDev HighlightsWithPhotoBackground_photo__KRDev_2"
-                    src="https://images.ctfassets.net/drib7o8rcbyf/4a67botDiY5vzArRZJFfPi/0d36e94f328601ffc0a4e10dec3cd584/REGENERATION_MODULE__Amenities_1440x720-min.jpg"
+                    src="<?="storage/".$post8->image?>"
                     alt="REGENERATION MODULE SPA 375x563-min" loading="lazy" style="object-position:50% 50%"
                     title="It’s Not Fitness. It’s Life.">
 
@@ -232,7 +232,7 @@ https://www.tooplate.com/view/2119-gymso-fitness
                         href="https://www.equinox.com/clubs?icmp=topnav-clubs" title="Discover More"><?=$post9->button?></a>
                 </div>
                 <img class="ResponsiveImage_responsive-image___2kO5 HighlightsWithPhotoBackground_photo__KRDev HighlightsWithPhotoBackground_photo__KRDev_3"
-                    src="https://images.ctfassets.net/drib7o8rcbyf/421G6B9N6ShV9NsX8Byxzp/0851d1a3b0360e718e262960ddc8ad43/REGENERATION_MODULE__ICONIC_SPACES_1440x720-min.jpg"
+                    src="<?="storage/".$post9->image?>"
                     alt="REGENERATION MODULE SPA 375x563-min" loading="lazy" style="object-position:50% 50%"
                     title="It’s Not Fitness. It’s Life.">
             </li>
