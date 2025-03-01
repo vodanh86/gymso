@@ -3,7 +3,7 @@
 <?php use App\Models\Post; ?>
 <head>
 
-    <title>Gymso Fitness HTML Template</title>
+    <title>Alpha Fitness And Life Style</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
@@ -19,10 +19,7 @@
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/tooplate-gymso-style.css">
     <link rel="stylesheet" href="css/equinox.css">
-    <!--
-Tooplate 2119 Gymso Fitness
-https://www.tooplate.com/view/2119-gymso-fitness
--->
+
 </head>
 
 <body data-spy="scroll" data-target="#navbarNav" data-offset="50">
