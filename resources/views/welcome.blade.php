@@ -160,27 +160,28 @@ https://www.tooplate.com/view/2119-gymso-fitness
                     src="<?="storage".$post4->image?>"
                     alt="CORE ANCILLARIES MODULE GF 375x563-min" loading="lazy" title="It’s Not Fitness. It’s Life.">
             </li>
+            <?php $post5 = Post::where('code', 'ALPHA5')->first(); ?>
             <li aria-current="false" class="pointer HighlightsWithPhotoBackground_highlight__l3wIT">
                 <div class="HighlightsWithPhotoBackground_highlight-info__mK8Rx "
                     onmouseenter="handleHighlightChange('classes', 2)">
-                    <h3 class="HighlightsWithPhotoBackground_highlight-title__dMkZ_">Personal Training</h3>
-                    <p class="HighlightsWithPhotoBackground_highlight-text__nh40m">Precision-backed 1:1 Personal Training with EFTI-certified COACHES, dedicated to maximizing your potential.</p><a
+                    <h3 class="HighlightsWithPhotoBackground_highlight-title__dMkZ_"><?=$post5->title?></h3>
+                    <p class="HighlightsWithPhotoBackground_highlight-text__nh40m"><?=$post5->content?></p><a
                         class="HighlightsWithPhotoBackground_highlight-link__UthCW"
-                        href="/personaltraining?icmp=home-personaltraining" title="Discover Personal Training">Discover
-                        Personal Training</a>
+                        href="/personaltraining?icmp=home-personaltraining" title="Discover Personal Training"><?=$post5->button?></a>
                 </div>
                 <img class="ResponsiveImage_responsive-image___2kO5 HighlightsWithPhotoBackground_photo__KRDev HighlightsWithPhotoBackground_photo__KRDev_2"
                     style="width: 100%; height: 100%; object-fit: cover;"
                     src="https://images.ctfassets.net/drib7o8rcbyf/65YoGitAhcKE9LuX7GED4/b5397a2c872f7eb2942f8d6dd765239a/CORE_ANCILLARIES_MODULE__PT_1440x720-min.jpg"
                     alt="CORE ANCILLARIES MODULE PT 375x563-min" loading="lazy" title="It’s Not Fitness. It’s Life.">
             </li>
+            <?php $post6 = Post::where('code', 'ALPHA6')->first(); ?>
             <li aria-current="true" class="pointer HighlightsWithPhotoBackground_highlight__l3wIT">
                 <div class="HighlightsWithPhotoBackground_highlight-info__mK8Rx "
                     onmouseenter="handleHighlightChange('classes', 3)">
-                    <h3 class="HighlightsWithPhotoBackground_highlight-title__dMkZ_">Authentic Pilates</h3>
-                    <p class="HighlightsWithPhotoBackground_highlight-text__nh40m">Studio Pilates sessions with 1:1 instruction. Tone your core and activate your mind-body connection.</p><a
+                    <h3 class="HighlightsWithPhotoBackground_highlight-title__dMkZ_"><?=$post6->title?></h3>
+                    <p class="HighlightsWithPhotoBackground_highlight-text__nh40m"><?=$post6->content?></p><a
                         class="HighlightsWithPhotoBackground_highlight-link__UthCW" href="/pilates?icmp=home-pilates"
-                        title="Discover Pilates">Discover Pilates</a>
+                        title="Discover Pilates"><?=$post6->button?></a>
                 </div>
                 <img class="ResponsiveImage_responsive-image___2kO5 HighlightsWithPhotoBackground_photo__KRDev HighlightsWithPhotoBackground_photo__KRDev_3"
                     style="width: 100%; height: 100%; object-fit: cover;"
