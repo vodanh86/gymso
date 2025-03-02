@@ -316,8 +316,6 @@
                 <div class="mx-auto mt-4 mt-lg-0 mt-md-0 col-lg-5 col-md-6 col-12">
                     <h2 class="mb-4" data-aos="fade-up" data-aos-delay="600">Where you can <span>find us</span></h2>
 
-                    <p data-aos="fade-up" data-aos-delay="800"><i class="fa fa-map-marker mr-1"></i> 120-240 Rio de
-                        Janeiro - State of Rio de Janeiro, Brazil</p>
                     <!-- How to change your own map point
 	1. Go to Google Maps
 	2. Click on your location point
@@ -325,8 +323,7 @@
 	4. Copy only URL and paste it within the src="" field below
 -->
                     <div class="google-map" data-aos="fade-up" data-aos-delay="900">
-                        <iframe
-                            src="https://maps.google.com/maps?q=Av.+Lúcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.160670875538!2d105.79569887452762!3d21.066244086491537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab29fd5b75b9%3A0xb9734d4dd9c371ef!2sAlpha%20Fitness%2C%20Yoga%20and%20Pool!5e0!3m2!1svi!2s!4v1740885796097!5m2!1svi!2s" 
                             width="1920" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                     </div>
                 </div>
