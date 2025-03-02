@@ -185,7 +185,7 @@
                 </div>
                 <img class="ResponsiveImage_responsive-image___2kO5 HighlightsWithPhotoBackground_photo__KRDev HighlightsWithPhotoBackground_photo__KRDev_3"
                     style="width: 100%; height: 100%; object-fit: cover;"
-                    src="<?="storage/".$post5->image?>"
+                    src="<?="storage/".$post6->image?>"
                     alt="CORE ANCILLARIES MODULE STUDIO PILATES 375x563-min" loading="lazy"
                     title="It’s Not Fitness. It’s Life.">
             </li>
