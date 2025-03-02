@@ -10,7 +10,7 @@
 
 @font-face {
   font-display: swap;
-  font-family: "Equinox Sans";
+  font-family: 'Montserrat', sans-serif;
   src: url("https://assets.cdn-equinox.com/fonts/Equinox-Sans/Bold.woff2?v=3") format("woff2");
   font-weight: 700;
   font-style: normal;
@@ -18,7 +18,7 @@
 
 @font-face {
   font-display: swap;
-  font-family: "Equinox Sans";
+  font-family: 'Montserrat', sans-serif;
   src: url("https://assets.cdn-equinox.com/fonts/Equinox-Sans/Bold-Italic.woff2?v=3") format("woff2");
   font-weight: 700;
   font-style: italic;
@@ -85,7 +85,7 @@ html {
 }
 
 html body {
-  font-family: "Equinox Sans", Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-feature-settings: "ss07";
   font-size: 1.6rem;
   font-style: normal;
