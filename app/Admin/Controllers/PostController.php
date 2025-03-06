@@ -33,6 +33,7 @@ class PostController extends AdminController
         $grid->column('content', __('Content'));
         $grid->column('button', __('Button'));
         $grid->column('image', __('Image'))->image();
+        $grid->column('video', __('Video'))->downloadable();
 
         $grid->column('created_at', __('Created at'));
         $grid->column('updated_at', __('Updated at'));
@@ -77,6 +78,7 @@ class PostController extends AdminController
         $form->textarea('content', __('Content'));
         $form->textarea('button', __('Button'));
         $form->image('image', __('Image'));
+        $form->file('video', __('Video'));
 
         return $form;
     }
