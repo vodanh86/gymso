@@ -118,7 +118,7 @@
     </section>
 
     <!-- Find -->
-    <?php $post3 = Post::where('code', 'ALPHA2')->first(); ?>
+    <?php $post3 = Post::where('code', 'ALPHA3')->first(); ?>
     <section class="member d-flex flex-column justify-content-center align-items-center" 
     style="background-image: url('<?="storage/".$post3->image?>');"id="home">
 
