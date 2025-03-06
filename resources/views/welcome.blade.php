@@ -118,31 +118,21 @@
     </section>
 
     <!-- Find -->
-    <?php $post3 = Post::where('code', 'ALPHA3')->first(); ?>
-    <section class="ExploreClubs_explore-clubs__y_0RN" data-eqx-plus-app="false" data-is="ExploreClubs">
-        <div class="ExploreClubs_content__EKXDA">
+    <?php $post3 = Post::where('code', 'ALPHA2')->first(); ?>
+    <section class="member d-flex flex-column justify-content-center align-items-center" 
+    style="background-image: url('<?="storage/".$post3->image?>');"id="home">
+
+        <div class="bg-overlay"></div>
+
+        <div class="ExploreClubs_content" style="">
             <div class="ExploreClubs_text__XX4Mx">
                 <h2 class="ExploreClubs_title__T4_4d"><?=$post3->title?></h2>
                 <div class="ExploreClubs_description__6nXd4"><?=$post3->content?></div><a class="ExploreClubs_cta__8ymBa"
-                    href="/clubs?icmp=home-clubs"><?=$post3->button?></a>
+                    href="/memberbenefits"><?=$post3->button?></a>
             </div>
         </div>
-        <figure class="ResponsiveVideo_responsive-video__F89V0 ExploreClubs_media__zlOjg">
-            <video playsinline autoplay muted loop style="height: 100%;">
-                <source src="./video/HUDSON_169_Desktop.mp4" type="video/mp4">
-            </video>
-            <button class="ResponsiveVideo_mute-toggle__eJa3Z" name="ResponsiveVideo - VolumeOff"
-                title="Unmute video sound" fdprocessedid="oy63n4"><svg stroke="currentColor" fill="currentColor"
-                    stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M390.1 464c-4.9 0-9.7-2.5-12.3-7L149.7 69.3c-4-6.7-1.7-15.4 5.1-19.3 6.8-3.9 15.5-1.7 19.5 5.1l228.1 387.7c4 6.7 1.7 15.4-5.1 19.3-2.2 1.3-4.7 1.9-7.2 1.9zM133 200H80c-8.9 0-16 7.2-16 16v80c0 8.8 7.2 16 16 16h53l65.4 52.5c2.9 2.3 6.5 3.5 10.1 3.5 2.4 0 4.7-.5 6.9-1.6 5.6-2.7 9.1-8.3 9.1-14.4V227.9L184 159.1 133 200zM448 256c0-59.3-23.3-114.9-65.5-156.5-4.7-4.7-12.3-4.6-17 .1-4.7 4.7-4.6 12.3.1 17C403.3 153.7 424 203.2 424 256c0 44.4-14.7 86.4-41.7 120.8l13 22C429.4 359.1 448 309 448 256z">
-                    </path>
-                    <path
-                        d="M385.2 256c0-43.5-16.7-84.3-46.9-114.9-4.7-4.7-12.3-4.8-17-.1-4.7 4.7-4.8 12.3-.1 17 25.8 26.1 40 60.9 40 98.1 0 21.6-4.8 42.5-13.9 61.2l14.2 24.1c15.4-25.4 23.7-54.7 23.7-85.4zM317.6 256c0-27.8-10.7-53.9-30-73.4-4.7-4.7-12.3-4.8-17-.1-.6.6-1.1 1.2-1.6 1.9l48.1 81.8c.3-3.4.5-6.8.5-10.2z">
-                    </path>
-                </svg></button>
-        </figure>
     </section>
+
     <?php $post4 = Post::where('code', 'ALPHA4')->first(); ?>
     <section class="HighlightsWithPhotoBackground_container__CiCM1 HighlightSection classes"
         data-is="HighlightsWithPhotoBackground">
