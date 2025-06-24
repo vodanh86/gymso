@@ -14,7 +14,7 @@ class SendController extends Controller
         // Thay thế bằng App ID và Secret Key thật của bạn
         define('ZALO_APP_ID', '1929928913067429705');
         define('ZALO_SECRET_KEY', 'GXh66vQQ9dQbr4gNSLGH');
-
+        \Log::info($request->all());
         // --- RẤT QUAN TRỌNG: Lấy OA Access Token
         // OA Access Token này là token dành cho Official Account của bạn,
         // KHÔNG PHẢI token của tài khoản Zalo cá nhân.
