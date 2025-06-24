@@ -65,7 +65,7 @@ class SendController extends Controller
             $response = curl_exec($ch);
             $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
             $curl_error = curl_error($ch);
-
+            \Log::info('cURL Response:', ['response' => $response, 'http_code' => $http_code, 'curl_error' => $curl_error]);
             curl_close($ch);
 
             if ($response === false) {
