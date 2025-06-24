@@ -33,7 +33,7 @@ class SendController extends Controller
 
         // --- 2. Hàm gửi tin nhắn Zalo ---
         function sendZaloMessage($user_id, $message_content, $access_token) {
-            $url = 'https://openapi.zalo.me/v2.0/oa/message';
+            $url = 'https://openapi.zalo.me/v3.0/oa/message';
 
             $headers = [
                 'Content-Type: application/json',
