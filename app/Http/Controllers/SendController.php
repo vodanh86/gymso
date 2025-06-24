@@ -30,7 +30,8 @@ class SendController extends Controller
         // Bạn sẽ nhận được user_id này từ Webhook khi người dùng tương tác với OA của bạn.
         $recipient_user_id = $request->input('sender.id', 'YOUR_RECIPIENT_USER_ID');
         $message_text = 'Chào bạn từ chatbot PHP Zalo!';
-
+        \Log::info('User ID:', ['user_id' => $recipient_user_id]);
+        \Log::error('Zalo API Error', ['response' => $message_text]);
         // --- 2. Hàm gửi tin nhắn Zalo ---
         function sendZaloMessage($user_id, $message_content, $access_token) {
             $url = 'https://openapi.zalo.me/v3.0/oa/message';
