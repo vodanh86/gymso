@@ -34,7 +34,7 @@ class SendController extends Controller
         \Log::error('Zalo API Error', ['response' => $message_text]);
         // --- 2. Hàm gửi tin nhắn Zalo ---
         function sendZaloMessage($user_id, $message_content, $access_token) {
-            $url = 'https://openapi.zalo.me/v3.0/oa/message';
+            $url = 'https://openapi.zalo.me/v3.0/oa/message/cs';
 
             $headers = [
                 'Content-Type: application/json',
