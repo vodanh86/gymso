@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class SendController extends Controller
 {
@@ -12,9 +13,7 @@ class SendController extends Controller
 
         // --- 1. Cấu hình của bạn ---
         // Thay thế bằng App ID và Secret Key thật của bạn
-        define('ZALO_APP_ID', '1929928913067429705');
-        define('ZALO_SECRET_KEY', 'GXh66vQQ9dQbr4gNSLGH');
-        \Log::info($request->all());
+    
         // --- RẤT QUAN TRỌNG: Lấy OA Access Token
         // OA Access Token này là token dành cho Official Account của bạn,
         // KHÔNG PHẢI token của tài khoản Zalo cá nhân.
@@ -24,12 +23,23 @@ class SendController extends Controller
         // Nếu không, bạn cần thực hiện luồng lấy OA Access Token theo tài liệu của Zalo,
         // thường sẽ liên quan đến việc lấy một "code" đặc biệt cho OA rồi đổi thành token.
         // Đơn giản nhất là lưu trữ nó sau khi đã lấy được.
-        define('ZALO_OA_ACCESS_TOKEN', 'HN-00mySQXjFVuW21nDi74rmY0O011aKC0wYUGqo9Xv12f1_IZWNEMiFbtTZ0WaDIp6tGbacLIrF3kbBPGDY4qrXxd9aKtCqAahkK1yXUW8WEi1g20Cd4183aGuUQYKJ8L6FIprZ6YGgTVr78avYEJSZrtLt358wEcxo9Z5jHLGmJVLA1YPg6XaTwtqA1cuzIYhFUmD7MW8TMUOPB79RHpvDvWm7VmLv45A3C2PE6KzhTwGCNnmrTa4CamPm6pWPCIInGnmGDnuKAx5QGKDH4N4fw6X-9WqTSn2LMc0zDmLX08LURmm7DLOoZNDFAcbe1KYFE1LKRNmWQCmV3nzKVH8Zopm95rTO57x77nbxVKqCO_qf8mvzMX8QzqSO61Gg8moLPpSm2I0kAvbL0pCP3nKQarDNDNXQqoe92s8G');
+        $zaloOaAccessToken = env('ZALO_OA_ACCESS_TOKEN');
 
         // ID của người dùng Zalo mà bạn muốn gửi tin nhắn đến.
         // Bạn sẽ nhận được user_id này từ Webhook khi người dùng tương tác với OA của bạn.
         $recipient_user_id = $request->input('sender.id', 'YOUR_RECIPIENT_USER_ID');
         $message_text = 'Chào bạn từ chatbot PHP Zalo!';
+
+            // Lấy câu hỏi từ message.text hoặc trường khác nếu cần
+        $question = $request->input('message.text', '');
+
+        // Gửi POST tới alphasius.com:8081/chat với body có trường question
+        $response = Http::post('http://alphasius.com:8081/chat', [
+            'question' => $question,
+        ]);
+
+        $message_text = $response->json()['answer'] ?? 'Không có câu trả lời từ server.';
+        
         \Log::info('User ID:', ['user_id' => $recipient_user_id]);
         \Log::error('Zalo API Error', ['response' => $message_text]);
         // --- 2. Hàm gửi tin nhắn Zalo ---
@@ -85,26 +95,20 @@ class SendController extends Controller
         }
 
         // --- 3. Thực thi gửi tin nhắn ---
-        if (ZALO_OA_ACCESS_TOKEN === 'YOUR_ZALO_OA_ACCESS_TOKEN') {
-            echo "Lỗi: Vui lòng thay thế 'YOUR_ZALO_OA_ACCESS_TOKEN' bằng Access Token thực tế của OA của bạn.\n";
-        } elseif ($recipient_user_id === 'YOUR_RECIPIENT_USER_ID') {
-            echo "Lỗi: Vui lòng thay thế 'YOUR_RECIPIENT_USER_ID' bằng ID người dùng Zalo hợp lệ.\n";
-        } else {
-            $result = sendZaloMessage($recipient_user_id, $message_text, ZALO_OA_ACCESS_TOKEN);
 
-            if ($result['success']) {
-                echo "Gửi tin nhắn Zalo thành công!\n";
-                print_r($result['data']);
-            } else {
-                echo "Gửi tin nhắn Zalo thất bại: " . $result['message'] . "\n";
-                if (isset($result['http_code'])) {
-                    echo "HTTP Code: " . $result['http_code'] . "\n";
-                }
-                if (isset($result['response_data'])) {
-                    echo "Phản hồi chi tiết: " . json_encode($result['response_data'], JSON_PRETTY_PRINT) . "\n";
-                }
+        $result = sendZaloMessage($recipient_user_id, $message_text, $zaloOaAccessToken);
+
+        if ($result['success']) {
+            echo "Gửi tin nhắn Zalo thành công!\n";
+            print_r($result['data']);
+        } else {
+            echo "Gửi tin nhắn Zalo thất bại: " . $result['message'] . "\n";
+            if (isset($result['http_code'])) {
+                echo "HTTP Code: " . $result['http_code'] . "\n";
+            }
+            if (isset($result['response_data'])) {
+                echo "Phản hồi chi tiết: " . json_encode($result['response_data'], JSON_PRETTY_PRINT) . "\n";
             }
         }
-
     }
 }
